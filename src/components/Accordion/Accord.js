@@ -5,6 +5,7 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import {Container, Grid} from "@mui/material";
+import {AccordionImage} from "./AccordStyles";
 
 export default function SimpleAccordion() {
     return (
@@ -15,11 +16,11 @@ export default function SimpleAccordion() {
                         РАЗРАБОТКИ MVP </Typography>
                 </Grid>
                 <Grid item xs={12} sm={6}>
-                    <img src='./Mobile.png' style={{height: '400px', width: '400px'}}/>
+                    <AccordionImage src='./Mvp.JPG'/>
                 </Grid>
                 <Grid item xs={12} sm={6}>
                     <Typography sx={{color: '#8B8B8B'}}>
-                        Заказывая у нас создание MVP, вы получаете ресурс опытной команды разработчиков, который можете
+                        Работая с нами, вы получаете ресурс опытной команды разработчиков, который можете
                         использовать по своему усмотрению.
                     </Typography>
                     <br/>

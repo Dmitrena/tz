@@ -122,7 +122,7 @@ export const PricingButton = styled.button`
   white-space: nowrap;
   color: #fff; 
   outline: none;
-  width: 100%;
+  width: 50%;
   font-size: 1.4rem;
   padding: 5px 15px;
   border: 2px solid black;

@@ -29,6 +29,8 @@ import {
 } from "@mui/material";
 import axios from "axios";
 import {FormColumn, FormRow, FormSection, FormWrapper} from "../Form/FormStyles";
+import ModalWindow from "../Modal/Modal";
+import ModalSel from "../ModalSel/ModalSel";
 
 const style = {
 	position: 'absolute',
@@ -43,17 +45,28 @@ const style = {
 }
 
 function Pricing() {
+	const [showModal, setShowModal] = useState(false);
 	const [name, setName] = useState('');
 	const [surname, setSurname] = useState('');
 	const [phone, setPhone] = useState('');
 	const [value, setValue] = React.useState('');
-	const [open, setOpen] = React.useState(false);
-	const handleOpen = () => setOpen(true);
-	const handleClose = () => setOpen(false);
+
+	const toggleModal = () => {
+		if (!showModal) {
+			document.body.style.overflow = 'hidden';
+		} else {
+			document.body.style.overflow = 'visible';
+		}
+
+		setShowModal(!showModal);
+	};
+
 
 	const TOKEN = "5516882396:AAGEVHwkEJVX2UbFC-uk0LF8iBmrcRZHL6k";
 	const CHAT_ID = "-1001643949074";
 	const URI_API = `https://api.telegram.org/bot5542567962:AAFXKFv976FbkouugXBRceog5URIY8DrPw8/sendMessage`;
+
+
 
 	const send = async (e) => {
 		e.preventDefault();
@@ -80,7 +93,7 @@ function Pricing() {
 		<IconContext.Provider value={{ color: '#a9b3c1', size: '1rem' }}>
 			<PricingSection id="pricing">
 				<PricingWrapper>
-					<Heading>Выберите какой вариант вам подходит</Heading>
+					<Heading>Тариф</Heading>
 
 					<TextWrapper
 						mb="1.4rem"
@@ -110,44 +123,42 @@ function Pricing() {
 						))}
 
 					</PricingContainer>
-					<Grid sx={{mt:7}}>
-					<Typography sx={{color:"white"}} variant="h4">Заказать сайт</Typography>
-					</Grid>
+						<PricingButton onClick={toggleModal}>Заказать</PricingButton>
+					{/*<FormSection>*/}
+					{/*	<Container>*/}
+					{/*		<Grid container sx={{mt:-12}}>*/}
 
-					<FormSection>
-						<Container>
-							<Grid container sx={{mt:-10}}>
-
-							<FormRow>
-								<FormColumn small>
-						<form onSubmit={send}>
-						<TextField value={name} required id="name" label="Им'я" variant="standard" sx={{width: '100%'}}
-								   onChange={(e) => setName(e.target.value)}/>
-						<TextField value={surname} required id="surname" label="Фамилия" variant="standard" sx={{width: '100%'}}
-								   onChange={(e) => setSurname(e.target.value)}/>
-						<TextField value={phone} required id="phone" label="Номер телефона" variant="standard" sx={{width: '100%'}}
-								   onChange={(e) => setPhone(e.target.value)}/>
-							<RadioGroup
-								sx={{mt:3}}
-								aria-labelledby="demo-controlled-radio-buttons-group"
-								name="controlled-radio-buttons-group"
-								value={value}
-								onChange={(e) => setValue(e.target.value)}							>
-								<FormControlLabel value="1" control={<Radio />} label="Landing R" />
-								<FormControlLabel value="2" control={<Radio />} label="lend" />
-								<FormControlLabel value="3" control={<Radio />} label="Shop" />
-								<FormControlLabel value="4" control={<Radio />} label="Shop R" />
-							</RadioGroup>
-							<PricingButton type="submit">Заказать</PricingButton>
-
-						</form>
-								</FormColumn>
-							</FormRow>
-					</Grid>
-						</Container>
-					</FormSection>
+					{/*			<FormRow>*/}
+					{/*			<FormColumn small>*/}
+					{/*				<Typography sx={{color:"black"}} variant="h4">Оформить Заказ</Typography>*/}
+					{/*				<form onSubmit={send}>*/}
+					{/*	<TextField value={name} required id="name" label="Им'я" variant="standard" sx={{width: '100%'}}*/}
+					{/*			   onChange={(e) => setName(e.target.value)}/>*/}
+					{/*	<TextField value={surname} required id="surname" label="Фамилия" variant="standard" sx={{width: '100%'}}*/}
+					{/*			   onChange={(e) => setSurname(e.target.value)}/>*/}
+					{/*	<TextField value={phone} required id="phone" label="Номер телефона" variant="standard" sx={{width: '100%'}}*/}
+					{/*			   onChange={(e) => setPhone(e.target.value)}/>*/}
+					{/*		<RadioGroup*/}
+					{/*			sx={{mt:3}}*/}
+					{/*			aria-labelledby="demo-controlled-radio-buttons-group"*/}
+					{/*			name="controlled-radio-buttons-group"*/}
+					{/*			value={value}*/}
+					{/*			onChange={(e) => setValue(e.target.value)}							>*/}
+					{/*			<FormControlLabel value="1" control={<Radio />} label="Landing R" />*/}
+					{/*			<FormControlLabel value="2" control={<Radio />} label="lend" />*/}
+					{/*			<FormControlLabel value="3" control={<Radio />} label="Shop" />*/}
+					{/*			<FormControlLabel value="4" control={<Radio />} label="Shop R" />*/}
+					{/*		</RadioGroup>*/}
+					{/*		<PricingButton type="submit">Заказать</PricingButton>*/}
+					{/*	</form>*/}
+					{/*			</FormColumn>*/}
+					{/*		</FormRow>*/}
+					{/*</Grid>*/}
+					{/*	</Container>*/}
+					{/*</FormSection>*/}
 				</PricingWrapper>
 			</PricingSection>
+			<ModalSel showModal={showModal} toggleModal={toggleModal} />
 		</IconContext.Provider>
 	);
 }

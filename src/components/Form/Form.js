@@ -3,6 +3,7 @@ import {FormButton, FormColumn, FormRow, FormSection, FormTitle, FormWrapper,} f
 import {Container} from '../../globalStyles';
 import {Alert, Snackbar, TextField} from "@mui/material";
 import axios from "axios";
+import {FormInput, FormInputRow, FormLabel} from "../Forma/FormaStyles";
 
 const Form = () => {
 	const [name, setName] = useState('');
@@ -14,21 +15,11 @@ const Form = () => {
 
 
 
-	// const send = async (e) => {
-	// 	e.preventDefault();
-	// 	axios.post("http://localhost:5000/application",{name,phone,question})
-	// 		.then((response) => {
-	// 			console.log("response", response);
-	// 			setName("");
-	// 			setPhone("");
-	// 			setQuestion('');
-	// 		})
-	// 		.catch((error) => console.log(error.response.data.message));
-	// }
+
 
 	const send = async (e) => {
 		e.preventDefault();
-		let message = `<b>Applic:</b>\n `;
+		let message = `<b>Заявка:</b>\n `;
 		message += `<b>Sender:</b> ${name}\n `;
 		message += `<b>Phone:</b> ${phone}\n `;
 		message += `<b>Question:</b> ${question}\n `;
@@ -45,19 +36,39 @@ const Form = () => {
  			setQuestion('');
 		});
 	}
+	const formData = [
+		{
+			label: "Им'я",
+			value: name,
+			onChange: (e) => setName(e.target.value),
+			type: "text",
+		},
+		{
+			label: "Номер Телефона",
+			value: phone,
+			onChange: (e) => setPhone(e.target.value),
+			type: "phone",
+		},
+		{
+			label: "Вам вопрос",
+			value: question,
+			onChange: (e) => setQuestion(e.target.value),
+		},
+
+	];
 	return (
 		<FormSection>
 			<Container>
 				<FormRow>
-					<FormColumn small>
-						<FormTitle>Your question</FormTitle>
+					<FormColumn>
+						<FormTitle>Безплатная консультация</FormTitle>
 						<FormWrapper onSubmit={send}>
-							<TextField value={name} required id="name" label="Им'я" variant="standard" sx={{width: '100%'}}
-									   onChange={(e) => setName(e.target.value)}/>
-								<TextField value={phone} required id="phone" label="Номер телефона" variant="standard" sx={{width: '100%'}}
-												onChange={(e) => setPhone(e.target.value)}/>
-							<TextField value={question} required id="question" label="Вопрос" variant="standard" sx={{width: '100%'}} multiline rows={3}
-									   onChange={(e) => setQuestion(e.target.value)}/>
+							{formData.map((el, index) => (
+								<FormInputRow key={index}>
+									<FormLabel>{el.label} *</FormLabel>
+									<FormInput required value={el.value} onChange={el.onChange} />
+								</FormInputRow>
+							))}
 
 							<FormButton type="submit">Отправить</FormButton>
 						</FormWrapper>

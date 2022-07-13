@@ -47,9 +47,9 @@ const Navbar = () => {
 			<Nav>
 				<NavbarContainer>
 					<NavLogo to="/">
-						ТЗ
-						<NavIcon src="./LogoBg.png" alt="logo" />
-						ЭК
+
+						<NavIcon src="./LogoBlackBg.png" alt="logo" />
+
 					</NavLogo>
 					<MobileIcon onClick={handleClick}>
 						{show ? <FaTimes /> : <CgMenuRight />}

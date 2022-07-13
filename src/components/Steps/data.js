@@ -3,7 +3,7 @@ import DetailedRecord from '../../images/icon-detailed-records.svg';
 import FullyCustomizable from '../../images/icon-fully-customizable.svg';
 
 export const features = {
-    title: 'Advanced Statistics',
+    title: 'От идеи до первой продажи',
     description: 'Track how your links are performing across the web with our advanced statistics dashboard.',
     items: [
         {

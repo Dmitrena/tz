@@ -31,3 +31,10 @@ width:600px;
   font-size: 26px;
   line-height: 130%;
   letter-spacing: 0.02em;`;
+
+export const AccordionImage = styled.img`
+  max-width: 97%;
+  height: auto;
+  padding: 0;
+  margin: 0;
+`

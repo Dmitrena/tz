@@ -22,9 +22,8 @@ function Footer() {
         <FooterGrid justify="space-between">
           <FooterColumn id="footerLogo">
             <FooterLogo to="/">
-              ТЗ
-              <SocialIcon src="./LogoBg.png" />
-              ЭК
+
+              <SocialIcon src="./LogoWhite.png" />
             </FooterLogo>
             <FooterAddress>
               69 Street, Delta Building, US Road, Los Angeles 123

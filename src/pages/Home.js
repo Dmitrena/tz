@@ -14,9 +14,7 @@ const Home = () => {
 			<Hero />
 			<Crok/>
 			<Features />
-			{/*<Content {...heroOne} />*/}
-			<Content {...heroTwo} />
-			{/*<Content {...heroThree} />*/}
+
 			<SimpleAccordion />
 			<Carousel/>
 		</>

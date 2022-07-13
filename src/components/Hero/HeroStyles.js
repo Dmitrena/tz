@@ -75,8 +75,59 @@ export const HeroPhone = styled(motion.h3)`
   text-align: right;
   letter-spacing: 2px;
   color: #fff;
-  width:91%;
+  width:81%;
   @media screen and (max-width:768px){
     width:70%
   }
-`
+`;
+
+export const HeroButtonContainer = styled.div`
+	position: relative;
+	display: flex;
+	height: 170px;
+`;
+
+export const HeroButtonWrapper = styled.div`
+	position: absolute;
+	height: 100vh;
+	width: 100%;
+	left: 0;
+	top: 0;
+`;
+
+export const HeroButtonBig = styled(motion.button)`
+	position: absolute;
+	width: 250px;
+	margin: 0 auto;
+	padding: 15px 20px;
+	bottom: calc(100vh - 100px);
+	right: 50%;
+	transform: translate(50%);
+	font-weight: 700;
+	font-size: 0.688rem;
+	line-height: 18px;
+	letter-spacing: 1.54px;
+	text-transform: uppercase;
+	border-radius: 25px;
+	border: none;
+	background-color: white;
+	color: #5238b1;
+	cursor: pointer;
+	transition: all 0.4s ease-in;
+
+	&.corner {
+		position: fixed;
+		bottom: 3rem;
+		right: 3rem;
+		width: 64px;
+		height: 64px;
+		padding: 10px;
+		background-color: #ef4b6c;
+		border-radius: 50%;
+	}
+
+	&:hover {
+		box-shadow: 0 0 9px 9px #5238b1;
+		transition: box-shadow 0.3s ease-in;
+	}
+`;
