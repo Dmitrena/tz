@@ -88,7 +88,7 @@ const Hero = () => {
                     {inView ? (
                         <> Безплатная консультация</>
                     ) : (
-                        <FiMail color="white" size="2.3rem" style={{zIndex:'5'}}/>
+                        <FiMail color="white" size="2.3rem" style={{position:'relative',zIndex:'50'}}/>
                     )}
                 </HeroButtonBig>
             </HeroButtonWrapper>

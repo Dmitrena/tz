@@ -46,7 +46,7 @@ function Footer() {
               </div>
           ))}
         </FooterGrid>
-        <FooterRights>By E-Build © 2022</FooterRights>
+        <FooterRights>By BRIEF EXPERT © 2022</FooterRights>
       </FooterWrapper>
     </Section>
   );

@@ -9,7 +9,7 @@ const Form = () => {
 	const [name, setName] = useState('');
 	const [phone, setPhone] = useState('');
 	const [question, setQuestion] = useState('');
-	const TOKEN = "5516882396:AAGEVHwkEJVX2UbFC-uk0LF8iBmrcRZHL6k";
+	const TOKEN = process.env.REACT_APP_TOKEN;
 	const CHAT_ID = "-1001643949074";
 	const URI_API = `https://api.telegram.org/bot5542567962:AAFXKFv976FbkouugXBRceog5URIY8DrPw8/sendMessage`;
 

@@ -69,7 +69,7 @@ export const HeroButton = styled(Button)`
 `;
 
 export const HeroPhone = styled(motion.h3)`
-  margin-top: 205px;
+  margin-top: 135px;
   font-size: clamp(0.9rem, 1.5vw, 1.3rem);
   line-height: 24px;
   text-align: right;

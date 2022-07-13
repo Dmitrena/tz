@@ -40,12 +40,15 @@ export default function SimpleAccordion() {
                     <Accordion sx={{
                         boxShadow: 'none', '&:before': {
                             display: 'none',
-                        }
+                        },
+                        position:'relative',
+                        zIndex:-24
                     }}>
                         <AccordionSummary
                             expandIcon={<ExpandMoreIcon/>}
                             aria-controls="panel1a-content"
                             id="panel1a-header"
+
                         >
                             <Typography sx={{fontSize: '22px'}}><strong>1.</strong> Подготовительный этап</Typography>
                         </AccordionSummary>
@@ -65,7 +68,9 @@ export default function SimpleAccordion() {
                     <Accordion sx={{
                         boxShadow: 'none', '&:before': {
                             display: 'none',
-                        }
+                        },
+                        position:'relative',
+                        zIndex:-24
                     }}>
                         <AccordionSummary
                             expandIcon={<ExpandMoreIcon/>}
@@ -85,7 +90,9 @@ export default function SimpleAccordion() {
                     <Accordion sx={{
                         boxShadow: 'none', '&:before': {
                             display: 'none',
-                        }
+                        },
+                        position:'relative',
+                        zIndex:-24
                     }}>
                         <AccordionSummary
                             expandIcon={<ExpandMoreIcon/>}
@@ -104,7 +111,9 @@ export default function SimpleAccordion() {
                     <Accordion sx={{
                         boxShadow: 'none', '&:before': {
                             display: 'none',
-                        }
+                        },
+                        position:'relative',
+                        zIndex:-24
                     }}>
                         <AccordionSummary
                             expandIcon={<ExpandMoreIcon/>}
@@ -122,7 +131,6 @@ export default function SimpleAccordion() {
                         </AccordionDetails>
                     </Accordion>
                     <Grid sx={{height:'100px'}}></Grid>
-                    {/*<Typography sx={{lineHeight:'100px',opacity:'0'}}>)</Typography>*/}
                 </Grid>
             </Grid>
         </Container>
