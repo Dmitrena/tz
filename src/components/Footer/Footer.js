@@ -23,14 +23,14 @@ function Footer() {
           <FooterColumn id="footerLogo">
             <FooterLogo to="/">
 
-              <SocialIcon src="./LogoWhite.png" />
+              <SocialIcon src="./REM.png" />
             </FooterLogo>
             <FooterAddress>
-              69 Street, Delta Building, US Road, Los Angeles 123
+              +7 985 522 0 999
             </FooterAddress>
-            <FooterEmail>
-              example.gmail.com
-            </FooterEmail>
+            {/*<FooterEmail>*/}
+            {/*  example.gmail.com*/}
+            {/*</FooterEmail>*/}
 
           </FooterColumn>
           {footerSocialData.map((social, index) => (

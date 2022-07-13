@@ -94,7 +94,7 @@ const Hero = () => {
             </HeroButtonWrapper>
         </HeroButtonContainer>
 
-        <HeroPhone custom={3} variants={PhoneAnim}>+43141241421421</HeroPhone>
+        <HeroPhone custom={3} variants={PhoneAnim}>+7 985 522 0 999</HeroPhone>
     </HeroSection>
           <ModalWindow showModal={showModal} toggleModal={toggleModal} />
       </motion.section>

@@ -1,15 +1,16 @@
 import React from 'react';
-import { Container, Section } from '../../globalStyles';
+import {Container, Section} from '../../globalStyles';
 import {
-	FeatureText,
-	FeatureTitle,
-	FeatureWrapper,
 	FeatureColumn,
+	FeatureDescription,
 	FeatureImageWrapper,
 	FeatureName,
+	FeatureText,
 	FeatureTextWrapper,
+	FeatureTitle,
+	FeatureWrapper,
 } from './FeaturesStyles';
-import { featuresData } from '../../data/FeaturesData';
+import {featuresData} from '../../data/FeaturesData';
 
 const Features = () => {
 	const initial = {
@@ -39,6 +40,9 @@ const Features = () => {
 								{el.icon}
 							</FeatureImageWrapper>
 							<FeatureName>{el.name}</FeatureName>
+							<FeatureDescription>
+								{el.descriptionN}
+							</FeatureDescription>
 							<FeatureText>{el.description}</FeatureText>
 						</FeatureColumn>
 					))}

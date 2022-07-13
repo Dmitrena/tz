@@ -121,6 +121,8 @@ export default function SimpleAccordion() {
                             </Typography>
                         </AccordionDetails>
                     </Accordion>
+                    <Grid sx={{height:'100px'}}></Grid>
+                    {/*<Typography sx={{lineHeight:'100px',opacity:'0'}}>)</Typography>*/}
                 </Grid>
             </Grid>
         </Container>

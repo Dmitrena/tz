@@ -16,7 +16,7 @@ const Home = () => {
 			<Features />
 
 			<SimpleAccordion />
-			<Carousel/>
+			{/*<Carousel/>*/}
 		</>
 	);
 };

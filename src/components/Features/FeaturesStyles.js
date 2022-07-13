@@ -50,8 +50,9 @@ export const FeatureImageWrapper = styled.div`
 	padding: 30px;
 `;
 export const FeatureName = styled.h3`
-	font-weight: 600;
-	font-size: 1.3rem;
+  text-align: center;
+	font-weight: 800;
+	font-size: 1.0rem;
 	letter-spacing: 2px;
 
 	@media screen and (max-width: 768px) {
@@ -59,6 +60,19 @@ export const FeatureName = styled.h3`
 		font-size: 1rem;
 		letter-spacing: 1.3px;
 	}
+`;
+export const FeatureDescription = styled.p`
+  margin: 0 auto 0 auto;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.73;
+  letter-spacing: 0.5px;
+  color: #626881;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 export const FeatureText = styled.p`
 	margin: 1rem 0 auto;

@@ -1,6 +1,7 @@
 .Features {
   background-color: #EEEEEE;
   padding: 3rem 0;
+  max-width:100%;
 
   text-align: center;
 
@@ -34,7 +35,7 @@
 
   @media (min-width: 1024px) {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     gap: 2rem;
     align-items: flex-start;
   }
@@ -42,10 +43,11 @@
 
 .item {
   position: relative;
-  z-index: 2;
+  z-index: 0;
   background-color: #fff;
   border-radius: 0.5rem;
   padding: 5rem 1rem 1.25rem;
+width:25%;
 
   figure {
     position: absolute;
