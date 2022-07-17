@@ -37,7 +37,7 @@ export const HeroText = styled(motion.p)`
 	text-align: left;
 	letter-spacing: 2px;
 	color: #fff;
-  width:50%;
+  width:80%;
   @media screen and (max-width:768px){
     width:70%
   }
@@ -69,7 +69,7 @@ export const HeroButton = styled(Button)`
 `;
 
 export const HeroPhone = styled(motion.h3)`
-  margin-top: 135px;
+  margin-top: 30px;
   font-size: clamp(0.9rem, 1.5vw, 1.3rem);
   line-height: 24px;
   text-align: right;
@@ -80,6 +80,8 @@ export const HeroPhone = styled(motion.h3)`
     width:70%
   }
 `;
+export const HeroString = styled.div`
+text-align: left`;
 
 export const HeroButtonContainer = styled.div`
 	position: relative;

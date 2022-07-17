@@ -6,7 +6,6 @@ import {useInView} from 'react-intersection-observer';
 import {useAnimation} from 'framer-motion';
 
 export const Content = ({
-	primary,
 	topLine,
 	headline,
 	description,
@@ -14,9 +13,6 @@ export const Content = ({
 	description3,
 	description4,
 	description5,
-	buttonLabel,
-	img,
-	alt,
 	inverse,
 	reverse,
 }) => {

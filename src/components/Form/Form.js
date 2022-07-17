@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import {FormButton, FormColumn, FormRow, FormSection, FormTitle, FormWrapper,} from './FormStyles';
 import {Container} from '../../globalStyles';
-import {Alert, Snackbar, TextField} from "@mui/material";
 import axios from "axios";
 import {FormInput, FormInputRow, FormLabel} from "../Forma/FormaStyles";
 
@@ -50,7 +49,7 @@ const Form = () => {
 			type: "phone",
 		},
 		{
-			label: "Вам вопрос",
+			label: "Ваш вопрос",
 			value: question,
 			onChange: (e) => setQuestion(e.target.value),
 		},
@@ -61,7 +60,7 @@ const Form = () => {
 			<Container>
 				<FormRow>
 					<FormColumn>
-						<FormTitle>Безплатная консультация</FormTitle>
+						<FormTitle>Бесплатная консультация</FormTitle>
 						<FormWrapper onSubmit={send}>
 							{formData.map((el, index) => (
 								<FormInputRow key={index}>

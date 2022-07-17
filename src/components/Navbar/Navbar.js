@@ -1,19 +1,10 @@
-import React, { useState } from 'react';
-import { FaRProject, FaTimes } from 'react-icons/fa';
-import { CgMenuRight } from 'react-icons/cg';
-import { IconContext } from 'react-icons';
-import {
-	Nav,
-	NavbarContainer,
-	NavLogo,
-	NavIcon,
-	MobileIcon,
-	NavMenu,
-	NavLinks,
-	NavItem,
-} from './NavbarStyles.js';
-import { useLocation, useHistory } from 'react-router-dom';
-import { data } from '../../data/NavbarData';
+import React, {useState} from 'react';
+import {FaTimes} from 'react-icons/fa';
+import {CgMenuRight} from 'react-icons/cg';
+import {IconContext} from 'react-icons';
+import {MobileIcon, Nav, NavbarContainer, NavIcon, NavItem, NavLinks, NavLogo, NavMenu,} from './NavbarStyles.js';
+import {useHistory, useLocation} from 'react-router-dom';
+import {data} from '../../data/NavbarData';
 
 const Navbar = () => {
 	const [show, setShow] = useState(false);

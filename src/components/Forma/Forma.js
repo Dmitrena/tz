@@ -45,13 +45,6 @@ const Forma = () => {
         });
     }
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-
-        setName("");
-        setPhone("");
-        setQuestion("");
-    };
 
 
 
@@ -81,7 +74,7 @@ const Forma = () => {
             <Container>
                 <FormRow>
                     <FormColumn>
-                        <FormTitle>Безплатная консультация</FormTitle>
+                        <FormTitle>Бесплатная консультация</FormTitle>
                         <FormWrapper onSubmit={send}>
                             {formData.map((el, index) => (
                                 <FormInputRow key={index}>

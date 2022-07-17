@@ -37,12 +37,11 @@ export default function SimpleAccordion() {
                         захотите что-то добавить или изменить.
                     </Typography>
                     <br/>
+                    <Grid container justifyContent='center'>
                     <Accordion sx={{
                         boxShadow: 'none', '&:before': {
                             display: 'none',
                         },
-                        position:'relative',
-                        zIndex:-24
                     }}>
                         <AccordionSummary
                             expandIcon={<ExpandMoreIcon/>}
@@ -69,8 +68,6 @@ export default function SimpleAccordion() {
                         boxShadow: 'none', '&:before': {
                             display: 'none',
                         },
-                        position:'relative',
-                        zIndex:-24
                     }}>
                         <AccordionSummary
                             expandIcon={<ExpandMoreIcon/>}
@@ -91,8 +88,6 @@ export default function SimpleAccordion() {
                         boxShadow: 'none', '&:before': {
                             display: 'none',
                         },
-                        position:'relative',
-                        zIndex:-24
                     }}>
                         <AccordionSummary
                             expandIcon={<ExpandMoreIcon/>}
@@ -112,8 +107,6 @@ export default function SimpleAccordion() {
                         boxShadow: 'none', '&:before': {
                             display: 'none',
                         },
-                        position:'relative',
-                        zIndex:-24
                     }}>
                         <AccordionSummary
                             expandIcon={<ExpandMoreIcon/>}
@@ -130,6 +123,7 @@ export default function SimpleAccordion() {
                             </Typography>
                         </AccordionDetails>
                     </Accordion>
+                    </Grid>
                     <Grid sx={{height:'100px'}}></Grid>
                 </Grid>
             </Grid>

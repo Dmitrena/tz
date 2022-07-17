@@ -2,9 +2,7 @@ import React, {useState} from "react";
 import {
     FormButton,
     FormColumn,
-    FormInput,
     FormInputRow,
-    FormLabel,
     FormRow,
     FormSection,
     FormTitle,
